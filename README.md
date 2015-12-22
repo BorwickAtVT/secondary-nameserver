@@ -3,5 +3,5 @@ receives its information from a specified primary nameserver.
 
 Run as:
 
-    docker run 
-
+    cp docker-compose.yml.example docker-compose.yml
+    docker-compose up
