@@ -2,8 +2,9 @@ secondarydns:
   build: .
   hostname: secondarydns
   ports:
-    - 53:53
+    - 53:53/udp
+    - 53:53/tcp
   environment:
-    ZONE_NAMES: a.example.com b.example.com
-    MASTER_IP: 192.168.1.1
+    ZONE_NAMES: test.example.com test2.example.com
+    MASTER_IP: 192.168.0.1
   container_name: secondarydns
