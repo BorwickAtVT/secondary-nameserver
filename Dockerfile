@@ -7,8 +7,9 @@ RUN apt-get update -qq && \
     bind9
 
 ADD configurator.py /configurator.py
+ADD named.conf.options /etc/bind/named.conf.options
 
 EXPOSE 53
 
 ENTRYPOINT ["/configurator.py"]
-CMD ["/usr/sbin/named", "-f"]
+CMD ["/usr/sbin/named", "-g"]
