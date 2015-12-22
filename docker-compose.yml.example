@@ -1,0 +1,7 @@
+secondarydns:
+  build: .
+  hostname: secondarydns
+  environment:
+    ZONE_NAMES: a.example.com b.example.com
+    MASTER_IP: 192.168.1.1
+  container_name: secondarydns
